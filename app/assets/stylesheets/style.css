@@ -1021,7 +1021,7 @@ a.logo {
 }
 	.about .scroller{
 		display: inline-block;
-		width: 100%:;
+		width: 100%;
 	}
 
 	/*----------  CLIENTS LOGO  ----------*/
@@ -1071,7 +1071,7 @@ a.logo {
 }
 	.service .scroller{
 		display: inline-block;
-		width: 100%:;
+		width: 100%;
 	}
 	.service .flex-control-nav{
 		display: block;
@@ -1170,7 +1170,7 @@ a.logo {
 }
 	.contact .scroller{
 		display: inline-block;
-		width: 100%:;
+		width: 100%;
 	}
 	input[type="text"] {
 		border: 2px solid #ccc;
@@ -1275,7 +1275,7 @@ a.logo {
 }
 	.team .scroller{
 		display: inline-block;
-		width: 100%:;
+		width: 100%;
 	}
 	.team .left-content-text{
 		padding-top: 40px;
@@ -1351,7 +1351,7 @@ a.logo {
 }
 	.blog .scroller{
 		display: inline-block;
-		width: 100%:;
+		width: 100%;
 	}
 	.blog .left-content-text{
 		padding-top: 30px;
@@ -1473,7 +1473,7 @@ a.logo {
 }
 	.blog-single .scroller{
 		display: inline-block;
-		width: 100%:;
+		width: 100%;
 	}
 .blog-title{
 	position: relative;
@@ -1514,7 +1514,7 @@ a.logo {
 }
 	.blog-comments .scroller{
 		display: inline-block;
-		width: 100%:;
+		width: 100%;
 	}
 	.blog-comments .left-content-text{
 		padding-top: 40px;
