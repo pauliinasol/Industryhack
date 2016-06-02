@@ -11,6 +11,200 @@
   </head>
 </head>
 <body>
+
+  <div class="left-menu">
+      <!--  LOGO  -->
+      <a class="logo" href="index.html">
+          Industryhack<em class="orange">_</em>
+      </a>
+      <!--  //LOGO  -->
+
+      <!--  NAVIGATION  -->
+      <nav class="main-navi">
+          <ul>
+              <!-- <li>
+                  <a id="homeLink" href="index.html">
+                      Home
+                      <span class="dot"></span>
+                      <span class="corner"></span>
+                  </a>
+              </li> -->
+            </li>
+            <% if !logged_in? %>
+            <li>
+                <a href="/login">
+                    Log in
+                    <span class="dot"></span>
+                    <span class="corner"></span>
+                </a>
+            </li>
+            <li>
+                <a href="/signup">
+                    Create an account
+                    <span class="dot"></span>
+                    <span class="corner"></span>
+                </a>
+            </li>
+            <% else %>
+              <li>
+                <a href="/sessions/destroy">
+                    Log out
+                </a>
+              </li>
+            <% end %>
+
+            <% if logged_in? %>
+
+              <li id="portfolioLink">
+                  <div>
+                      Profile
+                      <span class="dot"></span>
+                      <span class="corner"></span>
+                  </div>
+                  <ul class="drop-down">
+                      <li>
+                          <a href="/profile">
+                              Hacker profile
+                          </a>
+                      </li>
+                      <li>
+                          <a href="portfolio_four_column.html">
+                              Your hackathons
+                          </a>
+                      </li>
+                      <li>
+                          <a href="portfolio_horizontal.html">
+                              Your teams
+                          </a>
+                      </li>
+
+                  </ul>
+              </li>
+
+
+              <li>
+                  <div>
+                      Hack
+                      <span class="dot"></span>
+                      <span class="corner"></span>
+                  </div>
+                  <ul class="drop-down">
+                      <li>
+                          <a href="/nextevents">
+                              Next events
+                          </a>
+                      </li>
+                      <li>
+                          <a href="team.html">
+                              Create a team
+                          </a>
+                      </li>
+                      <li>
+                          <a href="team.html">
+                              Invite hackers
+                          </a>
+                      </li>
+                      <li>
+                          <a href="team.html">
+                              Search hackers
+                          </a>
+                      </li>
+                      <li>
+                          <a href="apply.html">
+                              Apply hackathons
+                          </a>
+                      </li>
+                  </ul>
+              </li>
+
+              <% if current_user.admin? %>
+              <li>
+                  <a href="/userlist">
+                      Admin
+                      <span class="dot"></span>
+                      <span class="corner"></span>
+                  </a>
+              </li>
+              <% end %>
+
+              <% end %>
+              <li>
+                  <div>
+                      About hackathons
+                      <span class="dot"></span>
+                      <span class="corner"></span>
+                  </div>
+                  <ul class="drop-down">
+                      <li>
+                          <a href="blog.html">
+                              What is a hackathon?
+                          </a>
+                      </li>
+                      <li>
+                          <a href="blog_single.html">
+                              Who can attend?
+                          </a>
+                      </li>
+                      <li>
+                          <a href="blog_single.html">
+                              What to bring
+                          </a>
+                      </li>
+                  </ul>
+              </li>
+
+
+
+              <li>
+                  <a href="/contact">
+                      Contacts
+                      <span class="dot"></span>
+                      <span class="corner"></span>
+                  </a>
+              </li>
+          </ul>
+          <em id="showHideMenu" class="show-hide-menu glyph fa-bars" href=""></em>
+      </nav>
+      <!--  //NAVIGATION  -->
+
+      <!--  TWITTER  -->
+      <div class="twitter-block flexslider">
+          <span class="glyph fa-twitter"></span>
+          <ul class="slides">
+              <li>
+                  <div class="name">@industry_hack</div>
+                  <p class="mini">Honored for the recognition from the community, THANK YOU! #bluearrowawards #propellerhead #industryhack.</p>
+
+              </li>
+              <li>
+                  <div class="name">@industry_hack</div>
+                  <p class="mini">The winner of 12th #industryhack and #hacktheturbine #fortumhack is Proximity w/ their UMM plugin for traders!</p>
+
+              </li>
+              <li>
+                  <div class="name">@industry_hack</div>
+                  <p class="mini">Jury is pondering which team shall win the #fortumhack #industryhack.</p>
+
+              </li>
+          </ul>
+      </div>
+      <!--  //TWITTER  -->
+
+      <!--  SOCIAL ICONS  -->
+      <div class="soc-icons">
+          <a class="glyph fa-twitter" href="http://twitter.com/industry_hack"></a>
+          <a class="glyph fa-facebook" href="https://www.facebook.com/industryhackcom/"></a>
+          <a class="glyph fa-linkedin" href="https://www.linkedin.com/company/9436804?trk=tyah&trkInfo=clickedVertical%3Acompany%2CclickedEntityId%3A9436804%2Cidx%3A2-1-4%2CtarId%3A1464839602627%2Ctas%3Aindustryha"></a>
+      </div>
+      <!--  //SOCIAL ICONS  -->
+      <p class="copy">
+          <!-- Copyright © 2014, All Rights Reserved -->
+      </p>
+  </div>
+
+  <!--  PRELOADER  -->
+  <img id="preloader" alt="" src="assets/preloader.GIF">
+  <!--  //PRELOADER  -->
 <%= yield %>
 
 </body>

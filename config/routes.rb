@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   # get '/signup' => 'users#signup'
   get '/profile' => 'users#profile'
   get '/apply' => 'hackathons#apply'
+  get '/nextevents' => 'hackathons#nextevents'
+
+  get '/userlist' => 'admin#userlist'
 
   get '/hackersignup' => 'pages#hackersignup'
   # get '/hackersignup' => 'users#hackersignup'

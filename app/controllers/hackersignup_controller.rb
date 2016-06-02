@@ -12,12 +12,13 @@ class HackersignupController < ApplicationController
   @user.strength = params[:strength]
   @user.password = params[:password]
   @user.password_confirmation = params[:password_confirmation]
+  @user.admin = false
   @user.save
   if @user.save
     session[:user_id] = @user.id
     redirect_to "/"
   else
-    render '/users/hackersignup'
+    render '/pages/hackersignup'
   end
 end
 

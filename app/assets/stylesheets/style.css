@@ -58,7 +58,39 @@ a.logo {
 }
 
 .form-control.error {
-	background-color: #f16824;
+	background-color: #f2dede;
+}
+
+.hackathons {
+	padding: 20px;
+	background-color: #F2F2F2;
+
+}
+
+.wrapper:hover {
+	background: #212121;
+	transition:2s;
+}
+
+.hackathoninfo {
+	text-transform: none;
+	font-size: 15px !important;
+	margin-top: 10px;
+	line-height: 40px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.wrapper {
+    border: 1px solid #1A1A1A;
+		background-color: #F2F2F2;
+    padding: 1em;
+		display: inline-block;
+
+}
+
+.hackathon_img {
+	max-width: 300px;
 }
 
 /*----------  LEFT MENU  ----------*/

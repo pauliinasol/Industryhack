@@ -11,10 +11,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160601055814) do
+ActiveRecord::Schema.define(version: 20160602033952) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "hackathons", force: :cascade do |t|
+    t.string   "name"
+    t.string   "company"
+    t.string   "dates"
+    t.string   "theme"
+    t.string   "location"
+    t.string   "contact_person"
+    t.string   "contact_email"
+    t.string   "contact_phone"
+    t.string   "contact_occupation"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
+
+  create_table "teams", force: :cascade do |t|
+    t.string   "name"
+    t.string   "contact"
+    t.string   "contact_email"
+    t.string   "contact_phone"
+    t.text     "team_info"
+    t.text     "team_cv"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
