@@ -10,7 +10,7 @@
 
     <body>
         <!--  PRELOADER  -->
-        <img id="preloader" alt="" src="assets/preloader.GIF">
+        <img id="preloader" alt="" src="<% image_tag 'preloader.GIF' %>">
         <!--  //PRELOADER  -->
 
         <!--  LEFT MENU  -->
@@ -178,7 +178,7 @@
             <!--  //TWITTER  -->
 
             <!--  SOCIAL ICONS  -->
-            <div class="soc-icons">
+            <div class="soc-icons" style="font-family: ElegantIcons">
                 <a class="glyph fa-twitter" href=""></a>
                 <a class="glyph fa-facebook" href=""></a>
                 <a class="glyph fa-google-plus" href=""></a>
@@ -204,95 +204,28 @@
             <div class="service main-block">
                 <div class="left-content col-lg-9">
                     <div class="scroller">
-                        <!--  IMAGES SLIDER  -->
-                        <!-- <div class="flexslider">
-                                <ul class="slides">
-                                    <li>
-                                        <a href="">
-                                            <img src="../images/ih8.jpg" alt="" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <img src="../images/ih4.jpg" alt="" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <img src="../images/ih9.jpg" alt="" />
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div> -->
-                        <!--  //IMAGES SLIDER  -->
+
                         <article class="left-content-text">
 
-                            <strong>Create your Industryhack programmer account</strong>
+                            <strong>Coming Hackathons</strong>
 
-                            <% if @user && @user.errors %>
-                              <%= @user.errors.full_messages[0] %>
-                            <% end %>
+                            <p class="mini">Choose the team:</p>
 
-
-                            <form style="width:500px" method="post">
-
-                                  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-                                <div class="form-group">
-
-                                    <label>Name</label>
-                                    <input type="newName" name="name" class="form-control" id="name" placeholder="Name">
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-bottom: 20px">
+                                    Choose team
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <div>
+                                        <a class="dropdown-item apply" href="#">Team Linux</a>
+                                    </div>
+                                    <div>
+                                        <a class="dropdown-item apply" href="#">Team Atom</a>
+                                    </div>
                                 </div>
-                                <div class="form-group">
+                            </div>
 
-                                    <label>Profile image url</label>
-                                    <input type="newImage" name="image_url" class="form-control" id="image_url" placeholder="Image url">
-                                </div>
-                                <div class="form-group">
-
-                                    <label>Email</label>
-                                    <input type="newEmail" name="email" class="form-control" id="email" placeholder="Email">
-                                </div>
-                                <div class="form-group">
-
-                                    <label>Occupation</label>
-                                    <input type="newEmail" name="occupation" class="form-control" id="occupation" placeholder="Email">
-                                </div>
-                                <div class="form-group">
-
-                                    <label>Phone number</label>
-                                    <input type="newPhone" name="phone" class="form-control" id="phone" placeholder="Phone number">
-                                </div>
-                                <div class="form-group">
-
-                                    <label>Nationality</label>
-                                    <input type="nationality" class="form-control" id="nationality" placeholder="Nationality">
-                                </div>
-                                <div class="form-group">
-
-                                    <label>Github username</label>
-                                    <input type="newGithub" name="github" class="form-control" id="github" placeholder="Github">
-                                </div>
-
-                                <div class="form-group">
-
-                                    <label>Password</label>
-                                    <input type="password" name="password" class="form-control" id="password" placeholder="Password">
-                                    <input type="password" name="password_confirmation" class="form-control <%= 'error' if @user && @user.errors.messages[:password_confirmation]  %>" id="password_confirmation" placeholder="Confirm password">
-                                </div>
-
-                                <div class="btn-group" role="group" aria-label="Basic example">
-
-                                    <button type="button" class="btn btn-secondary">Javascript</button>
-                                    <button type="button" class="btn btn-secondary">CSS</button>
-                                    <button type="button" class="btn btn-secondary">Ruby</button>
-                                    <button type="button" class="btn btn-secondary">Rails</button>
-                                    <button type="button" class="btn btn-secondary">AngularJS</button>
-                                    <button type="button" class="btn btn-secondary">React</button>
-                                    <button type="button" class="btn btn-secondary">NodeJS</button>
-                                </div>
-                                <p><button type="submit" class="btn btn-warning">Create account</button></p>
-                            </form>
-
+                            <p class="mini">Click the hackathon you wanted to apply:</p>
 
                         </article>
                     </div>

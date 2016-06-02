@@ -2,10 +2,20 @@ Rails.application.routes.draw do
 
   get '/' => 'home#index'
   get '/index' => 'home#index'
-  get '/login' => 'users#login'
-  get '/signup' => 'users#signup'
-  get '/hackersignup' => 'users#hackersignup'
+  get '/login' => 'pages#login'
+  get '/signup' => 'pages#signup'
+  # get '/login' => 'users#login'
+  # get '/signup' => 'users#signup'
+  get '/profile' => 'users#profile'
+  get '/apply' => 'hackathons#apply'
 
+  get '/hackersignup' => 'pages#hackersignup'
+  # get '/hackersignup' => 'users#hackersignup'
+  post '/hackersignup' => 'hackersignup#create'
+
+
+  post '/sessions' => 'sessions#create'
+  get '/sessions/destroy' => 'sessions#destroy'
 
   resources :users
 

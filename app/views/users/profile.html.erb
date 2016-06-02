@@ -152,60 +152,60 @@
                 </ul>
                 <em id="showHideMenu" class="show-hide-menu glyph fa-bars" href=""></em>
             </nav>
-            <!--  //NAVIGATION  -->
+        <!--  //NAVIGATION  -->
 
-            <!--  TWITTER  -->
-            <div class="twitter-block flexslider">
-                <span class="glyph fa-twitter"></span>
-                <ul class="slides">
-                    <li>
-                        <div class="name">@industry_hack</div>
-                        <p class="mini">Honored for the recognition from the community, THANK YOU! #bluearrowawards #propellerhead #industryhack.</p>
+        <!--  TWITTER  -->
+        <div class="twitter-block flexslider">
+            <span class="glyph fa-twitter"></span>
+            <ul class="slides">
+                <li>
+                    <div class="name">@industry_hack</div>
+                    <p class="mini">Honored for the recognition from the community, THANK YOU! #bluearrowawards #propellerhead #industryhack.</p>
 
-                    </li>
-                    <li>
-                        <div class="name">@industry_hack</div>
-                        <p class="mini">The winner of 12th #industryhack and #hacktheturbine #fortumhack is Proximity w/ their UMM plugin for traders!</p>
+                </li>
+                <li>
+                    <div class="name">@industry_hack</div>
+                    <p class="mini">The winner of 12th #industryhack and #hacktheturbine #fortumhack is Proximity w/ their UMM plugin for traders!</p>
 
-                    </li>
-                    <li>
-                        <div class="name">@industry_hack</div>
-                        <p class="mini">Jury is pondering which team shall win the #fortumhack #industryhack.</p>
+                </li>
+                <li>
+                    <div class="name">@industry_hack</div>
+                    <p class="mini">Jury is pondering which team shall win the #fortumhack #industryhack.</p>
 
-                    </li>
-                </ul>
-            </div>
-            <!--  //TWITTER  -->
-
-            <!--  SOCIAL ICONS  -->
-            <div class="soc-icons">
-                <a class="glyph fa-twitter" href=""></a>
-                <a class="glyph fa-facebook" href=""></a>
-                <a class="glyph fa-google-plus" href=""></a>
-                <a class="glyph fa-linkedin" href=""></a>
-                <a class="glyph fa-dribbble" href=""></a>
-                <a class="glyph fa-pinterest" href=""></a>
-            </div>
-            <!--  //SOCIAL ICONS  -->
-            <p class="copy">
-                <!-- Copyright © 2014, All Rights Reserved -->
-            </p>
+                </li>
+            </ul>
         </div>
-        <!--  //LEFT MENU  -->
+        <!--  //TWITTER  -->
 
-        <!--  RIGHT CONTENT  -->
+        <!--  SOCIAL ICONS  -->
+        <div class="soc-icons">
+            <a class="glyph fa-twitter" href=""></a>
+            <a class="glyph fa-facebook" href=""></a>
+            <a class="glyph fa-google-plus" href=""></a>
+            <a class="glyph fa-linkedin" href=""></a>
+            <a class="glyph fa-dribbble" href=""></a>
+            <a class="glyph fa-pinterest" href=""></a>
+        </div>
+        <!--  //SOCIAL ICONS  -->
+        <p class="copy">
+            <!-- Copyright © 2014, All Rights Reserved -->
+        </p>
+    </div>
+    <!--  //LEFT MENU  -->
 
-        <!--  RIGHT CONTENT  -->
-        <div class="right-content">
+    <!--  RIGHT CONTENT  -->
 
-            <!--  //HOME PAGE  -->
+    <!--  RIGHT CONTENT  -->
+    <div class="right-content">
 
-            <!--  SERVICE  -->
-            <div class="service main-block">
-                <div class="left-content col-lg-9">
-                    <div class="scroller">
-                        <!--  IMAGES SLIDER  -->
-                        <!-- <div class="flexslider">
+        <!--  //HOME PAGE  -->
+
+        <!--  SERVICE  -->
+        <div class="service main-block">
+            <div class="left-content col-lg-9">
+                <div class="scroller">
+                    <!--  IMAGES SLIDER  -->
+                    <!-- <div class="flexslider">
                                 <ul class="slides">
                                     <li>
                                         <a href="">
@@ -224,83 +224,89 @@
                                     </li>
                                 </ul>
                             </div> -->
-                        <!--  //IMAGES SLIDER  -->
-                        <article class="left-content-text">
+                    <!--  //IMAGES SLIDER  -->
+                    <article class="left-content-text">
 
-                            <strong>Create your Industryhack programmer account</strong>
+                        <strong>Profile</strong>
 
-                            <% if @user && @user.errors %>
-                              <%= @user.errors.full_messages[0] %>
-                            <% end %>
+                        <img class="profilephoto img-circle" src="<%= @current_user.image_url%>" alt="">
+                        <table class="table table-bordered" style="max-width:500px">
+                            <!-- <thead class="thead-default">
+                                <tr>
+                                    <th></th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                </tr>
+                            </thead> -->
+                            <tbody>
+                                <tr>
+                                    <th scope="row" style="width: 150px">Name</th>
+                                    <td><%= @current_user.name %></td>
 
+                                </tr>
+                                <tr>
+                                    <th scope="row">Phone number</th>
+                                    <td><%= @current_user.phone %></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Email</th>
+                                    <td><%= @current_user.email %></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Nationality</th>
+                                    <td><%= @current_user.nationality %></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Strength</th>
+                                    <td><%= @current_user.strength %></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Occupation</th>
+                                    <td><%= @current_user.occupation %></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Github address</th>
+                                    <td><%= @current_user.github %></td>
+                                </tr>
+                            </tbody>
+                        </table>
 
-                            <form style="width:500px" method="post">
-
-                                  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-                                <div class="form-group">
-
-                                    <label>Name</label>
-                                    <input type="newName" name="name" class="form-control" id="name" placeholder="Name">
-                                </div>
-                                <div class="form-group">
-
-                                    <label>Profile image url</label>
-                                    <input type="newImage" name="image_url" class="form-control" id="image_url" placeholder="Image url">
-                                </div>
-                                <div class="form-group">
-
-                                    <label>Email</label>
-                                    <input type="newEmail" name="email" class="form-control" id="email" placeholder="Email">
-                                </div>
-                                <div class="form-group">
-
-                                    <label>Occupation</label>
-                                    <input type="newEmail" name="occupation" class="form-control" id="occupation" placeholder="Email">
-                                </div>
-                                <div class="form-group">
-
-                                    <label>Phone number</label>
-                                    <input type="newPhone" name="phone" class="form-control" id="phone" placeholder="Phone number">
-                                </div>
-                                <div class="form-group">
-
-                                    <label>Nationality</label>
-                                    <input type="nationality" class="form-control" id="nationality" placeholder="Nationality">
-                                </div>
-                                <div class="form-group">
-
-                                    <label>Github username</label>
-                                    <input type="newGithub" name="github" class="form-control" id="github" placeholder="Github">
-                                </div>
-
-                                <div class="form-group">
-
-                                    <label>Password</label>
-                                    <input type="password" name="password" class="form-control" id="password" placeholder="Password">
-                                    <input type="password" name="password_confirmation" class="form-control <%= 'error' if @user && @user.errors.messages[:password_confirmation]  %>" id="password_confirmation" placeholder="Confirm password">
-                                </div>
-
-                                <div class="btn-group" role="group" aria-label="Basic example">
-
-                                    <button type="button" class="btn btn-secondary">Javascript</button>
-                                    <button type="button" class="btn btn-secondary">CSS</button>
-                                    <button type="button" class="btn btn-secondary">Ruby</button>
-                                    <button type="button" class="btn btn-secondary">Rails</button>
-                                    <button type="button" class="btn btn-secondary">AngularJS</button>
-                                    <button type="button" class="btn btn-secondary">React</button>
-                                    <button type="button" class="btn btn-secondary">NodeJS</button>
-                                </div>
-                                <p><button type="submit" class="btn btn-warning">Create account</button></p>
-                            </form>
-
-
-                        </article>
-                    </div>
-                    <div class="scroller__track">
-                        <div class="scroller__bar"></div>
-                    </div>
+                    </article>
                 </div>
-                <!--  //RIGHT CONTENT  -->
+                <div class="scroller__track">
+                    <div class="scroller__bar"></div>
+                </div>
+            </div>
+            <!--  //RIGHT CONTENT  -->
+            <div class="right-images col-lg-3 col-md-3 col-sm-3">
+              <div class="scroller">
+                  <ul>
+                      <li>
+                          <img src="/assets/ih1.jpg" alt="">
 
-            </body>
-        </html>
+                      </li>
+                      <li>
+                          <img src="/assets/ih2.jpg" alt="">
+
+                      </li>
+                      <li>
+                          <img src="/assets/ih4.jpg" alt="">
+
+                      </li>
+                      <li>
+                          <img src="/assets/ih7.jpg" alt="">
+
+                      </li>
+
+                  </ul>
+              </div>
+              <div class="scroller__track">
+                  <div class="scroller__bar"></div>
+              </div>
+          </div>
+          <!--  //RIGHT IMAGES  -->
+      </div>
+      <!--  //PORTFOLIO WITH DETAILS  -->
+  </div>
+        </body>
+    </html>

@@ -1,16 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<title>Industryhack_</title>
-
-
-
-</head>
-
-<body>
     <!--  PRELOADER  -->
     <img id="preloader" alt="" src="assets/preloader.GIF">
     <!--  //PRELOADER  -->
@@ -36,14 +24,14 @@
               </li>
               <% if !logged_in? %>
               <li>
-                  <a href="/login">
+                  <a href="login.html">
                       Log in
                       <span class="dot"></span>
                       <span class="corner"></span>
                   </a>
               </li>
               <li>
-                  <a href="/signup">
+                  <a href="signup.html">
                       Create an account
                       <span class="dot"></span>
                       <span class="corner"></span>
@@ -66,7 +54,7 @@
                     </div>
                     <ul class="drop-down">
                         <li>
-                            <a href="/profile">
+                            <a href="profile.html">
                                 Hacker profile
                             </a>
                         </li>
@@ -181,7 +169,7 @@
 
         <!--  SOCIAL ICONS  -->
         <div class="soc-icons">
-            <a class="glyph fa-twitter" href="http://twitter.com/industry_hack"></a>
+            <a class="glyph fa-twitter" href=""></a>
             <a class="glyph fa-facebook" href=""></a>
             <a class="glyph fa-google-plus" href=""></a>
             <a class="glyph fa-linkedin" href=""></a>
@@ -196,81 +184,109 @@
     <!--  //LEFT MENU  -->
 
     <!--  RIGHT CONTENT  -->
+
+    <!--  RIGHT CONTENT  -->
     <div class="right-content">
-        <!--  HOME PAGE  -->
-        <!--  SLIDER  -->
-        <div class="flexslider home-page">
-            <ul class="slides">
-                <li class="images-bg">
-                    <!--  SLIDER IMAGE  -->
-                    <%= image_tag 'ih8.jpg' %>
 
-                    <!--  //SLIDER IMAGE  -->
-
-                    <!--  CIRCLE  -->
-                    <div class="circle">
-                        <div class="home-title left">
-                            <span>
-                                Join<strong> the</strong>
-                            </span>
-                            <span>
-                                <strong></strong> hack
-                            </span>
-                            <p>Bringing innovation to life.</p>
-                        </div>
-
-                    </div>
-                    <!--  //CIRCLE  -->
-                </li>
-                <li class="images-bg">
-                    <!--  SLIDER IMAGE  -->
-                    <%= image_tag 'ih4.jpg' %>
-                    <!--  //SLIDER IMAGE  -->
-
-                    <!--  CIRCLE  -->
-                    <div class="circle">
-                        <div class="home-title top">
-                            <span>
-                                <strong>Join </strong>the
-                            </span>
-                            <span>
-                                <strong> hack</strong>
-                            </span>
-                            <p>Bringing innovation to life.</p>
-                        </div>
-
-                    </div>
-                    <!--  //CIRCLE  -->
-                </li>
-                <li class="images-bg">
-                    <!--  SLIDER IMAGE  -->
-                    <%= image_tag 'ih7.jpg' %>
-                    <!--  //SLIDER IMAGE  -->
-
-                    <!--  CIRCLE  -->
-                    <div class="circle">
-                        <div class="home-title zoom">
-                            <span>
-                                Join<strong> the</strong>
-                            </span>
-                            <span>
-                                <strong> hack</strong>
-                            </span>
-                            <p>Bringing innovation to life</p>
-                        </div>
-                    </div>
-                    <!--  //CIRCLE  -->
-                </li>
-            </ul>
-        </div>
-        <!--  //SLIDER  -->
         <!--  //HOME PAGE  -->
 
+        <!--  SERVICE  -->
+        <div class="service main-block">
+            <div class="left-content col-lg-9">
+                <div class="scroller">
+                    <!--  IMAGES SLIDER  -->
+                    <!-- <div class="flexslider">
+                            <ul class="slides">
+                                <li>
+                                    <a href="">
+                                        <img src="../images/ih8.jpg" alt="" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <img src="../images/ih4.jpg" alt="" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <img src="../images/ih9.jpg" alt="" />
+                                    </a>
+                                </li>
+                            </ul>
+                        </div> -->
+                    <!--  //IMAGES SLIDER  -->
+                    <article class="left-content-text">
 
-            <div class="scroller__track">
-                <div class="scroller__bar"></div>
+                        <strong>Create your Industryhack programmer account</strong>
+
+                        <% if @user && @user.errors %>
+                          <%= @user.errors.full_messages[0] %>
+                        <% end %>
+
+
+                        <form style="width:500px" method="post">
+
+                              <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+                            <div class="form-group">
+
+                                <label>Name</label>
+                                <input type="newName" name="name" class="form-control" id="name" placeholder="Name">
+                            </div>
+                            <div class="form-group">
+
+                                <label>Profile image url</label>
+                                <input type="newImage" name="image_url" class="form-control" id="image_url" placeholder="Image url">
+                            </div>
+                            <div class="form-group">
+
+                                <label>Email</label>
+                                <input type="newEmail" name="email" class="form-control" id="email" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+
+                                <label>Occupation</label>
+                                <input type="newEmail" name="occupation" class="form-control" id="occupation" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+
+                                <label>Phone number</label>
+                                <input type="newPhone" name="phone" class="form-control" id="phone" placeholder="Phone number">
+                            </div>
+                            <div class="form-group">
+
+                                <label>Nationality</label>
+                                <input type="nationality" class="form-control" id="nationality" placeholder="Nationality">
+                            </div>
+                            <div class="form-group">
+
+                                <label>Github username</label>
+                                <input type="newGithub" name="github" class="form-control" id="github" placeholder="Github">
+                            </div>
+
+                            <div class="form-group">
+
+                                <label>Password</label>
+                                <input type="password" name="password" class="form-control" id="password" placeholder="Password">
+                                <input type="password" name="password_confirmation" class="form-control <%= 'error' if @user && @user.errors.messages[:password_confirmation]  %>" id="password_confirmation" placeholder="Confirm password">
+                            </div>
+
+                            <div class="btn-group" role="group" aria-label="Basic example">
+
+                                <button type="button" class="btn btn-secondary">Javascript</button>
+                                <button type="button" class="btn btn-secondary">CSS</button>
+                                <button type="button" class="btn btn-secondary">Ruby</button>
+                                <button type="button" class="btn btn-secondary">Rails</button>
+                                <button type="button" class="btn btn-secondary">AngularJS</button>
+                                <button type="button" class="btn btn-secondary">React</button>
+                                <button type="button" class="btn btn-secondary">NodeJS</button>
+                            </div>
+                            <p><button type="submit" class="btn btn-warning">Create account</button></p>
+                        </form>
+
+
+                    </article>
+                </div>
+                <div class="scroller__track">
+                    <div class="scroller__bar"></div>
+                </div>
             </div>
-        </div>
-
-</body>
-</html>

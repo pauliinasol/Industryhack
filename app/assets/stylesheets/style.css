@@ -24,6 +24,12 @@ a, a:hover, a:active{
 h1, h2, h3, h4, h5, h6{
 	font-family:  'TTFirs', Helvetica, sans-serif !important;
 }
+
+.profilephoto {
+	max-width: 300px;
+	margin-bottom: 20px;
+	border: 1px solid black;
+}
 strong{
 	font-weight: 900;
 }
@@ -41,6 +47,18 @@ a.logo {
 	border: none;
 	box-shadow: none;
 	margin-bottom: 0;
+}
+
+.dropdown-item.apply {
+	margin: 20px !important;
+}
+
+.dropdown-item.apply:hover {
+	background-color: silver !important;
+}
+
+.form-control.error {
+	background-color: #f16824;
 }
 
 /*----------  LEFT MENU  ----------*/
@@ -1151,7 +1169,6 @@ a.logo {
 	textarea {
 	    border: 2px solid #ccc;
 		font: 900 12px 'Lato', sans-serif;
-		text-transform: uppercase;
 	    height: 140px;
 	    margin-bottom: 10px;
 	    padding: 10px 15px;
@@ -1170,7 +1187,6 @@ a.logo {
 		font-family: 'Lato', sans-serif;
 	    font-weight: 900;
 	    height: 50px;
-	    text-transform: uppercase;
 	    vertical-align: middle;
 	    width: 160px;
 
@@ -1241,7 +1257,6 @@ a.logo {
 	font-weight: 900;
 	line-height: 34px;
 	color: #ccc;
-	text-transform: uppercase;
 	margin-bottom: 30px;
 	display: block;
 
@@ -1289,6 +1304,10 @@ a.logo {
 	margin-top: 40px;
 }
 /*----------  //TEAM  ----------*/
+
+.left-content-text .exampleInputName2 .form-group {
+	text-transform: none !important;
+}
 
 /*----------  BLOG  ----------*/
 .blog {
@@ -1742,7 +1761,7 @@ a.logo {
 		font-size: 60px;
 		line-height: 60px;
 		font-weight: 300;
-		text-transform: uppercase;
+		text-transform: none;
 		color: #333;
 		margin-top: 0;
 
@@ -1757,7 +1776,7 @@ a.logo {
 		font-weight: 900;
 		line-height: 34px;
 		color: #ccc;
-		text-transform: uppercase;
+		text-transform: none;
 		margin-bottom: 55px;
 		display: block;
 	}
