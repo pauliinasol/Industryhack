@@ -51,9 +51,10 @@
                                 </tr>
                             </tbody>
                         </table>
+                        <%= form_tag '/profile', method: :delete do %>
 
                         <button class="btn btn-warning">Delete profile</button>
-
+                        <% end %>
                     </article>
                 </div>
                 <div class="scroller__track">

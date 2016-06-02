@@ -1,6 +1,8 @@
 class AdminController < ApplicationController
-  def userlist
-  end
 
+
+  def userlist
+    @users = User.all
+  end
 
 end

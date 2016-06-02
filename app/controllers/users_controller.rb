@@ -6,6 +6,13 @@ class UsersController < ApplicationController
     @current_user = current_user
   end
 
-
+  def destroy
+    @current_user = current_user
+    if @current_user.destroy
+      redirect_to '/'
+    else
+      render '/pages/signup'
+    end
+  end
 
 end

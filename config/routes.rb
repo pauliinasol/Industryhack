@@ -20,6 +20,9 @@ Rails.application.routes.draw do
   post '/sessions' => 'sessions#create'
   get '/sessions/destroy' => 'sessions#destroy'
 
+  delete '/profile' => 'users#destroy'
+
+
   resources :users
 
 

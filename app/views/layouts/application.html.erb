@@ -9,7 +9,9 @@
   <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
   <link href='http://fonts.googleapis.com/css?family=Lato:400,300,900,700' rel='stylesheet' type='text/css'>
   </head>
-</head>
+
+<link rel="icon" href="https://pbs.twimg.com/profile_images/695007044802211841/vfQqAFuz.png">
+
 <body>
 
   <div class="left-menu">
@@ -118,13 +120,32 @@
               </li>
 
               <% if current_user.admin? %>
+
               <li>
-                  <a href="/userlist">
+                  <div>
                       Admin
                       <span class="dot"></span>
                       <span class="corner"></span>
-                  </a>
+                  </div>
+                  <ul class="drop-down">
+                      <li>
+                          <a href="/userlist">
+                              Programmer list
+                          </a>
+                      </li>
+                      <li>
+                          <a href="/manage1">
+                              Manage materials
+                          </a>
+                      </li>
+                      <li>
+                          <a href="/manage2">
+                              Manage hackathons
+                          </a>
+                      </li>
+                  </ul>
               </li>
+
               <% end %>
 
               <% end %>
@@ -136,17 +157,17 @@
                   </div>
                   <ul class="drop-down">
                       <li>
-                          <a href="blog.html">
+                          <a href="/blog">
                               What is a hackathon?
                           </a>
                       </li>
                       <li>
-                          <a href="blog_single.html">
+                          <a href="/attendance">
                               Who can attend?
                           </a>
                       </li>
                       <li>
-                          <a href="blog_single.html">
+                          <a href="/bring">
                               What to bring
                           </a>
                       </li>
