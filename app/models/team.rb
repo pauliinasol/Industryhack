@@ -1,3 +1,3 @@
 class Team < ActiveRecord::Base
-  belongs_to: hackathon
+  belongs_to :hackathon
 end
