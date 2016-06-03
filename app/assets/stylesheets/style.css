@@ -61,6 +61,12 @@ a.logo {
 	background-color: #f2dede;
 }
 
+.btn.btn-warning.delete {
+	border-radius: 0% !important;
+	padding: 2px !important;
+	margin: 0px !important;
+}
+
 .hackathons {
 	padding: 20px;
 	background-color: #F2F2F2;

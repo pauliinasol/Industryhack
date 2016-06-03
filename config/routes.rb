@@ -22,6 +22,8 @@ Rails.application.routes.draw do
 
   delete '/profile' => 'users#destroy'
 
+  delete '/userlist/:id' => 'admin#destroy'
+
 
   resources :users
 

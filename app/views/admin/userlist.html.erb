@@ -27,9 +27,16 @@
                         <td><%= user.name %></td>
                         <td><%= user.email %></td>
                         <td><%= user.phone %></td>
-                          <th><a href="">Delete</a></th>
+
+                        <form action="/userlist/<%= user.id %>" method="post">
+                          <input type="hidden" value="delete" name="_method">
+                          <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+                          <th><button class="btn btn-warning delete">Delete</button></th>
+
+
                       </tr>
-      <% end %>
+<% end %>
                     </tbody>
                   </table>
 
