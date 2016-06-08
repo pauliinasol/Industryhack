@@ -1,28 +1,15 @@
-== README
+# case IndustyHack
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Purpose was to create a hacker database of programmers interested in hackathons
 
-Things you may want to cover:
+### App contains log in, sign up and admin features and functioning database of these.
 
-* Ruby version
+#### Languages, libraries and frameworks used:
 
-* System dependencies
+- HTML5
+- CSS3
+- Javascript
+- jQuery
+- Ruby on Rails
+- psql
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
